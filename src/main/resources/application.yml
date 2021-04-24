@@ -1,0 +1,26 @@
+
+spring:
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: ${url}
+    username: ${username}
+    password: ${password}
+server:
+#  port: 5000
+graphiql:
+  enabled: true
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          EnumType: TRACE
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+

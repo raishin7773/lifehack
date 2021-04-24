@@ -1,0 +1,17 @@
+type Lifehack {
+    id: ID!
+    title: String!
+    category: String!
+    description: String!
+}
+
+input SearchForm {
+    title: String
+    category: String
+    description:String
+}
+
+type Query {
+    getLifehackAllLimit: [Lifehack]
+    select(searchForm:SearchForm):[Lifehack]
+}
